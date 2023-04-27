@@ -8,18 +8,15 @@ import arrow from '../../Asssets/images/down.webp'
 
 import users_data from '../../Data/users.json'
 
-import randomNumbers from '../../Utils/random-number'
+// import randomNumbers from '../../Utils/random-number'
 
 const Chat = () => {
 
     const { userId } = useParams()
 
     const[isChatOpen, setChatOpen] = useState(false)
-    const[randomNum, setRandomNum] = useState([])
+    const[randomNum, setRandomNum] = useState([1, 3, 8])
 
-    useEffect(() => {
-        setRandomNum(randomNumbers())
-    }, [])
 
     const chatHandler = () => {
         setChatOpen(!isChatOpen)
@@ -38,9 +35,9 @@ const Chat = () => {
                 <div className={`${styles.users__list} ${!isChatOpen && styles.closed__list}`}>
                     {users_data.users.map((eachUser, index) => {
                         return (
-                            <div key={eachUser.id}>
+                            <>
                                 {eachUser.id != userId &&
-                                    <div className={`${styles.users__list__inner}`}>
+                                    <div className={`${styles.users__list__inner}`} key={eachUser.id}>
                                         <div className={`${styles.user}`} >
                                             <img src={eachUser.profilepicture} alt={eachUser.name} />
                                             <p>{eachUser.name.length > 15 ? eachUser.name.substring(0,15) + '...' : eachUser.name}</p>
@@ -48,7 +45,7 @@ const Chat = () => {
                                         <div className={`${styles.online__status} ${randomNum.includes(eachUser.id) ? styles.online : ''}`}></div>
                                     </div>  
                                 }  
-                            </div>
+                            </>
                                   
                         )
                     })}
