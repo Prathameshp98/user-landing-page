@@ -1,0 +1,11 @@
+
+.profile__main {
+    width: calc(100% - 60px);
+    height: calc(100vh - 60px);
+    background-color: aliceblue;
+    margin: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}

@@ -1,0 +1,127 @@
+
+.chat__main {
+    width: 230px;
+    height: 350px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.chat__hidden {
+    border: 1px solid #2c65c8;
+    border-bottom: none;
+    width: 230px;
+    height: 350px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    transition: transform .3s ease-in-out;
+}
+
+.closed__chat {
+    transform: translateY(305px);
+    border: none;
+}
+
+.chat__hidden .top__bar {
+    background-color: #2c65c8;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 7px 10px;
+}
+
+.chat__hidden .top__bar > img {
+    height: 20px;
+    padding: 5px 0;
+    transition: transform .3s ease-in-out;
+}
+
+.closed__img {
+    transform: rotate(180deg);
+}
+
+.chat__hidden .top__bar .top__bar__left {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.chat__hidden .top__bar .top__bar__left  img {
+    height: 25px;
+}
+
+.chat__hidden .top__bar .top__bar__left p {
+    color: #fff;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.chat__hidden .users__list {
+    margin: 10px 5px 5px 10px;
+    height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.closed__list {
+    display: none !important;
+}
+
+.chat__hidden .users__list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat__hidden .users__list::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.chat__hidden .users__list::-webkit-scrollbar-thumb {
+    background: #bcbcbc;
+}
+
+.chat__hidden .users__list::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+}
+
+.chat__hidden .users__list .users__list__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.chat__hidden .users__list .users__list__inner .user {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.chat__hidden .users__list .users__list__inner .user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+}
+
+.chat__hidden .users__list .users__list__inner .user p {
+    width: 80%;
+    margin: 0;
+    color: #5b5b5b;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.chat__hidden .users__list .users__list__inner .online__status {
+    height: 8px;
+    width: 8px;
+    margin: 12px 15px 12px 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.online {
+    background-color: #1fad63 !important;
+}

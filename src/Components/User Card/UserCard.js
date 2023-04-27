@@ -11,8 +11,8 @@ const UserCard = () => {
         <>
             {users_data.users.map((eachUser, index) => {
                 return (  
-                    <Link to={"/profile/" + eachUser.id} style={{ textDecoration: 'none' }}>
-                        <div className={`${styles.user__card}`} key={eachUser.id} >
+                    <Link to={"/profile/" + eachUser.id} style={{ textDecoration: 'none' }} key={eachUser.id}>
+                        <div className={`${styles.user__card}`} >
                             <img src={eachUser.profilepicture} alt={eachUser.name} />
                             <p>{eachUser.name}</p>
                         </div>
