@@ -4,11 +4,12 @@
 }
 
 .accounts_info {
-    position: relative;
+    position: fixed;
     z-index: 2;
-    bottom: 250px;
+    top: 20%;
+    left: calc(50% - 250px);
     height: fit-content;
-    width: 450px;
+    width: 500px;
     margin: auto;
     background-color:#fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -23,7 +24,7 @@
 }
 
 .accounts_info .heading h2 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: #5b5b5b;
     text-align: center;
@@ -35,14 +36,14 @@
 }
 
 .accounts_info .account__list__inner {
-    margin: 6px;
+    margin: 10px;
     padding: 0px 30px;
     height: 300px;
     overflow-y: scroll;
 }
 
 .accounts_info .account__list__inner::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
 }
 
 .accounts_info .account__list__inner::-webkit-scrollbar-track {
@@ -50,9 +51,33 @@
 }
 
 .accounts_info .account__list__inner::-webkit-scrollbar-thumb {
-    background: #cbcbcb;
+    background: #d5d5d5;
 }
 
 .accounts_info .account__list__inner::-webkit-scrollbar-thumb {
     border-radius: 3px;
+}
+
+.user__card {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 7px 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.user__card img {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.user__card p {
+    cursor: pointer;
+    margin: 0;
+    padding: 5px;
+    color: #5b5b5b;
+    font-size: 15px;
+    font-weight: 500;
 }
