@@ -7,7 +7,7 @@ import styles from '../../Asssets/CSS/profile.module.css'
 
 const Profile = () => {
 
-    const { user } = useParams()
+    const { userId } = useParams()
 
     return (
         <>  

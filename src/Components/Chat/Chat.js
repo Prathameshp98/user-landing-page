@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from "react-router-dom"
 
 import styles from '../../Asssets/CSS/Components/Chat/chat.module.css'
 
@@ -10,6 +11,8 @@ import users_data from '../../Data/users.json'
 import randomNumbers from '../../Utils/random-number'
 
 const Chat = () => {
+
+    const { userId } = useParams()
 
     const[isChatOpen, setChatOpen] = useState(false)
     const[randomNum, setRandomNum] = useState([])
@@ -35,13 +38,18 @@ const Chat = () => {
                 <div className={`${styles.users__list} ${!isChatOpen && styles.closed__list}`}>
                     {users_data.users.map((eachUser, index) => {
                         return (
-                            <div className={`${styles.users__list__inner}`} key={eachUser.id}>
-                                <div className={`${styles.user}`} key={eachUser.id} >
-                                    <img src={eachUser.profilepicture} alt={eachUser.name} />
-                                    <p>{eachUser.name.length > 15 ? eachUser.name.substring(0,15) + '...' : eachUser.name}</p>
-                                </div>
-                                <div className={`${styles.online__status} ${randomNum.includes(eachUser.id) ? styles.online : ''}`}></div>
-                            </div>          
+                            <div key={eachUser.id}>
+                                {eachUser.id != userId &&
+                                    <div className={`${styles.users__list__inner}`}>
+                                        <div className={`${styles.user}`} >
+                                            <img src={eachUser.profilepicture} alt={eachUser.name} />
+                                            <p>{eachUser.name.length > 15 ? eachUser.name.substring(0,15) + '...' : eachUser.name}</p>
+                                        </div>
+                                        <div className={`${styles.online__status} ${randomNum.includes(eachUser.id) ? styles.online : ''}`}></div>
+                                    </div>  
+                                }  
+                            </div>
+                                  
                         )
                     })}
                 </div>
