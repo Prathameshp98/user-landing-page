@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from "react-router-dom"
 
 import styles from '../../Asssets/CSS/Components/Chat/chat.module.css'
@@ -15,6 +15,7 @@ const Chat = () => {
     const { userId } = useParams()
 
     const[isChatOpen, setChatOpen] = useState(false)
+    // eslint-disable-next-line no-unused-vars
     const[randomNum, setRandomNum] = useState([1, 3, 8])
 
 

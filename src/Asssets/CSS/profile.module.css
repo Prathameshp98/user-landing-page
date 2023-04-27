@@ -5,6 +5,9 @@
     background-color: aliceblue;
     margin: 30px;
     overflow: hidden;
+}
+
+.profile__inner {
     display: flex;
     flex-direction: row;
     gap: 25px;
