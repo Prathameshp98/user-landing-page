@@ -1,0 +1,14 @@
+
+.comingsoon__main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.comingsoon__main p {
+    font-size: 65px;
+    font-weight: 700;
+    color: #dedede;
+}
