@@ -16,7 +16,7 @@ const Chat = () => {
 
     const[isChatOpen, setChatOpen] = useState(false)
     // eslint-disable-next-line no-unused-vars
-    const[randomNum, setRandomNum] = useState([1, 3, 8])
+    const[randomNum, setRandomNum] = useState([1, 3, 4, 8])
 
 
     const chatHandler = () => {
