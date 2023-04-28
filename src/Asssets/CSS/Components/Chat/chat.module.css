@@ -3,7 +3,6 @@
     width: 230px;
     height: 350px;
     position: fixed;
-    z-index: 2;
     bottom: 30px;
     right: 30px;
 }

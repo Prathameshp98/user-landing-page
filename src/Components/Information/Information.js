@@ -41,7 +41,7 @@ const Information = () => {
                         </div>
                         <div className={`${styles.information__inner__right}`}>
                             <div className={`${styles.information__address}`}>
-                                <p style={{paddingLeft: '40px', marginBottom: '10px'}}>Address:</p>
+                                <p>Address:</p>
                                 <div className={`${styles.outer}`}>
                                     <Entry name={'Street'} value={filteredUser.address.street}/>
                                     <Entry name={'Suite'} value={filteredUser.address.suite}/>
