@@ -22,7 +22,9 @@ const Header = (props) => {
             <div className={`${styles.header__right}`}>
                 {users_data.users.filter(user => user.id == userId).map(filteredUser => {
                     return (
-                        <div key={filteredUser.id}>
+                        <div key={filteredUser.id} className={`${styles.header__right__inner}`}>
+                            <img src={filteredUser.profilepicture} alt={filteredUser.name} />
+                            <p>{filteredUser.name}</p>
                         </div>
                     )
                 })}
