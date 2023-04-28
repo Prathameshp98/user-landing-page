@@ -4,6 +4,19 @@
     height: 100vh;
 }
 
+.information__main h6 {
+    margin: 0;
+    color: #545454;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.information__main p {
+    margin: 0;
+    color: #a5a5a5;
+    font-size: 17px;
+}
+
 .information__inner {
     margin-top: 0px;
     display: flex;
@@ -13,26 +26,72 @@
 }
 
 .information__inner .information__inner__left {
-    width: 40%;
-    border-right: 2px solid #dddddd;
+    width: 45%;
 }
 
 .information__inner .information__inner__left .information__general {
-    height: 50%;
-    margin: 10px 40px 20px 0px;
+    height: fit-content;
+    margin: 10px 10px 20px 0px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information__inner .information__inner__left .information__general > img {
+   height: 175px;
+   width: 175px;
+   border-radius: 100px;
+   margin-bottom: 10px;
 }
 
 .information__inner .information__inner__left .information__company {
-    height: 50%;
-    margin: 10px 40px 20px 0px;
+    height: fit-content;
+    margin: 10px 10px 20px 0px;
 }
 
 .information__inner .information__inner__right {
-    width: 60%;
+    width: 55%;
+    padding-left: 40px;
+    border-left: 2px solid #dddddd;
 }
 
 .information__inner .information__inner__right .information__address {
     height: 100%;
     margin: 10px 20px 20px 0px;
+}
+
+.information__inner .information__inner__right .information__address .information__address__map {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    margin: 20px 0px;
+}
+
+.information__inner .information__inner__right .information__address .information__address__map > img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.information__inner .information__inner__right .information__address .information__address__map > p {
+    margin: 0;
+    color: #a5a5a5;
+    font-size: 14px;
+}
+
+.information__inner .information__inner__right .information__address .information__address__map > p > span {
+    margin: 0;
+    color: #545454;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.outer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

@@ -1,0 +1,14 @@
+.inner {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}   
+
+.inner__left {
+    width: 40%;
+    text-align: right;
+}
+
+.inner__right {
+    width: 60%;
+}

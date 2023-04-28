@@ -3,6 +3,7 @@
     width: 230px;
     height: 350px;
     position: fixed;
+    z-index: 2;
     bottom: 30px;
     right: 30px;
 }
@@ -15,6 +16,7 @@
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
     transition: transform .3s ease-in-out;
+    background-color: #fff;
 }
 
 .closed__chat {
