@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    cursor: pointer;
 }
 
 .header__main .header__right .header__right__inner img {

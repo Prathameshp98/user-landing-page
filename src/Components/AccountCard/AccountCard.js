@@ -1,14 +1,20 @@
 /* eslint-disable eqeqeq */
-import React from 'react'
-import { useParams } from "react-router-dom"
+import React, { useState } from 'react'
+import { useParams, Link } from "react-router-dom"
 
 import styles from '../../Asssets/CSS/Components/AccountCard/account-card.module.css'
 
 import users_data from '../../Data/users.json'
 
-const AccountCard = () => {
+const AccountCard = (props) => {
 
     const { userId } = useParams()
+    // eslint-disable-next-line no-unused-vars
+    const[randomNum, setRandomNum] = useState([3, 4])
+
+    const cardCloseHandler = () => {
+        props.visibilityHandler(false)
+    }
 
     return (
         <div className={`${styles.accountcard__main}`}>
@@ -19,18 +25,24 @@ const AccountCard = () => {
                             <img src={filteredUser.profilepicture} alt={filteredUser.id} />
                             <h6>{filteredUser.name}</h6>
                             <p>{filteredUser.email}</p>
-                            {/* <div className={`${styles.accountcard__content__inner}`}>
-                                <hr />
-                                <div>
-                                    <img src={filteredUser.profilepicture} alt={filteredUser.id} />
-                                    <h6>{filteredUser.name}</h6>
-                                </div>    
-                                <hr />
-                                <div>
-                                    <img src={filteredUser.profilepicture} alt={filteredUser.id} />
-                                    <h6>{filteredUser.name}</h6>
-                                </div>   
-                            </div>     */}
+                            <div className={`${styles.accountcard__content__inner}`}>
+                                {users_data.users.filter(user => randomNum.includes(user.id)).map(filteredUser => {
+                                    return (
+                                        <div key={filteredUser.id} className={`${styles.accountcard__content__inner}`}>
+                                            <hr />
+                                            <Link to={"/profile/" + filteredUser.id} style={{ textDecoration: 'none' }} onClick={cardCloseHandler}>
+                                                <div className={`${styles.accountcard__content__inner__2}`}>
+                                                    <img src={filteredUser.profilepicture} alt={filteredUser.id} />
+                                                    <h6>{filteredUser.name}</h6>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    )
+                                })}  
+                            </div>
+                            <Link to={"/"} style={{ textDecoration: 'none' }} >
+                                <button className={`${styles.signout}`}>Sign out</button>   
+                            </Link> 
                         </div>
                     )
                 })}

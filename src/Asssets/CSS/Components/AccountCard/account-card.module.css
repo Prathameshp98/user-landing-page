@@ -7,8 +7,8 @@
     background-color: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
-    width: 225px;
-    height: 300px;
+    width: 250px;
+    height: fit-content;
 }
 
 .accountcard__inner {
@@ -40,4 +40,40 @@
     margin: 0;
     font-size: 13px;
     color: #cacaca;
+}
+
+.accountcard__inner .accountcard__content .accountcard__content__inner hr {
+    border: 1px solid #eeeeee;
+}
+
+.accountcard__inner .accountcard__content .accountcard__content__inner .accountcard__content__inner__2 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.accountcard__inner .accountcard__content .accountcard__content__inner .accountcard__content__inner__2 > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.accountcard__inner .accountcard__content .accountcard__content__inner .accountcard__content__inner__2 > h6 {
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #545454;
+}
+
+.accountcard__inner .accountcard__content .signout {
+    color: white;
+    background-color: #d55151;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
 }

@@ -37,6 +37,7 @@
 
 .sidebar__inner .sidebar__list p {
     color: #999cff;
+    cursor: pointer;
 }
 
 .sidebar__inner .sidebar__list p:hover {

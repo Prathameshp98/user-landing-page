@@ -46,7 +46,7 @@ const Header = (props) => {
                     })}
                 </div>
             </div>
-            {isVisible && <AccountCard />}
+            {isVisible && <AccountCard  visibilityHandler={visibilityHandler}/>}
         </>
     )
 }
