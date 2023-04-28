@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useState } from 'react'
 import { useParams } from "react-router-dom"
 
@@ -34,22 +35,20 @@ const Chat = () => {
                     <img className={`${!isChatOpen && styles.closed__img}`} src={arrow} alt="arrow"/>
                 </div>
                 <div className={`${styles.users__list} ${!isChatOpen && styles.closed__list}`}>
-                    {users_data.users.map((eachUser, index) => {
+                    {users_data.users.filter(user => user.id != userId).map(filteredUser => {
                         return (
-                            <>
-                                {eachUser.id != userId &&
-                                    <div className={`${styles.users__list__inner}`} key={eachUser.id}>
-                                        <div className={`${styles.user}`} >
-                                            <img src={eachUser.profilepicture} alt={eachUser.name} />
-                                            <p>{eachUser.name.length > 15 ? eachUser.name.substring(0,15) + '...' : eachUser.name}</p>
-                                        </div>
-                                        <div className={`${styles.online__status} ${randomNum.includes(eachUser.id) ? styles.online : ''}`}></div>
-                                    </div>  
-                                }  
-                            </>
-                                  
+                            <div key={filteredUser.id}>
+                                <div className={`${styles.users__list__inner}`} key={filteredUser.id}>
+                                    <div className={`${styles.user}`} >
+                                        <img src={filteredUser.profilepicture} alt={filteredUser.name} />
+                                        <p>{filteredUser.name.length > 15 ? filteredUser.name.substring(0,15) + '...' : filteredUser.name}</p>
+                                    </div>
+                                    <div className={`${styles.online__status} ${randomNum.includes(filteredUser.id) ? styles.online : ''}`}></div>
+                                </div>  
+                            </div>
                         )
                     })}
+           
                 </div>
             </div>
         </div>

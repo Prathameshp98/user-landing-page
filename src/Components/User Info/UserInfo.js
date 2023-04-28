@@ -9,7 +9,7 @@ import styles from '../../Asssets/CSS/Components/UserInfo/user-info.module.css'
 const UserInfo = (props) => {
     return (
         <div className={`${styles.userinfo__main}`}>
-            <Header />
+            <Header option={props.option} />
             {props.option.profile ? <Information /> : <ComingSoon />}
         </div>
     )
