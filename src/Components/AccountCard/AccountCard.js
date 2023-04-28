@@ -10,7 +10,7 @@ const AccountCard = (props) => {
 
     const { userId } = useParams()
     // eslint-disable-next-line no-unused-vars
-    const[randomNum, setRandomNum] = useState([3, 4])
+    const[randomNum, setRandomNum] = useState([3, 4, 6])
 
     const cardCloseHandler = () => {
         props.visibilityHandler(false)
@@ -26,7 +26,7 @@ const AccountCard = (props) => {
                             <h6>{filteredUser.name}</h6>
                             <p>{filteredUser.email}</p>
                             <div className={`${styles.accountcard__content__inner}`}>
-                                {users_data.users.filter(user => randomNum.includes(user.id)).map(filteredUser => {
+                                {users_data.users.filter(user => user.id != userId).filter(user => randomNum.includes(user.id)).map(filteredUser => {
                                     return (
                                         <div key={filteredUser.id} className={`${styles.accountcard__content__inner}`}>
                                             <hr />
