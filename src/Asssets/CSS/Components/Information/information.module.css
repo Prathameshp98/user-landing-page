@@ -1,0 +1,38 @@
+
+.information__main {
+    width: 100%;
+    height: 100vh;
+}
+
+.information__inner {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 70%;
+}
+
+.information__inner .information__inner__left {
+    width: 40%;
+    border-right: 2px solid #dddddd;
+}
+
+.information__inner .information__inner__left .information__general {
+    height: 50%;
+    margin: 10px 40px 20px 0px;
+    border-bottom: 2px solid #dddddd;
+}
+
+.information__inner .information__inner__left .information__company {
+    height: 50%;
+    margin: 10px 40px 20px 0px;
+}
+
+.information__inner .information__inner__right {
+    width: 60%;
+}
+
+.information__inner .information__inner__right .information__address {
+    height: 100%;
+    margin: 10px 20px 20px 0px;
+}
