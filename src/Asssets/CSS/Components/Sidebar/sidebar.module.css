@@ -1,6 +1,6 @@
 .sidebar__main {
     height: calc(100vh - 90px);
-    width: 18%;
+    width: 275px;
     border-radius: 25px;
     background: rgb(56, 87, 197);
     background: linear-gradient(180deg, rgba(56, 87, 197, 1) 0%, rgba(96, 57, 200, 1) 100%);
@@ -25,8 +25,8 @@
 }
 
 .sidebar__inner .shape img {
-    width: fit-content;
-    padding: 6px;
+    width: 20px;
+    padding: 8px;
 }
 
 .sidebar__inner .sidebar__list .sidebar__item {
