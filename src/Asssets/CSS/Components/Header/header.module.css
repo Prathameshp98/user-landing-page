@@ -16,6 +16,10 @@
     padding: 3px 0;
 }
 
+.header__main .header__right {
+    margin-right: 20px;
+}
+
 .header__main .header__right .header__right__inner {
     display: flex;
     flex-direction: row;

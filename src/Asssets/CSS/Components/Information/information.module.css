@@ -26,7 +26,7 @@
 }
 
 .information__inner .information__inner__left {
-    width: 40%;
+    width: 35%;
 }
 
 .information__inner .information__inner__left .information__general {
@@ -60,7 +60,7 @@
 
 .information__inner .information__inner__right .information__address {
     height: 100%;
-    margin: 10px 20px 20px 0px;
+    margin: 10px 20px 20px -20%;
 }
 
 .information__inner .information__inner__right .information__address .information__address__map {
@@ -72,7 +72,7 @@
 }
 
 .information__inner .information__inner__right .information__address .information__address__map > img {
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
 }
 

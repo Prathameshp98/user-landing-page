@@ -9,7 +9,7 @@ import styles from '../../Asssets/CSS/Components/UserInfo/user-info.module.css'
 const UserInfo = (props) => {
     return (
         <div className={`${styles.userinfo__main}`}>
-            <Header option={props.option} />
+            <Header option={props.option} scroll={props.scroll}/>
             {props.option.profile ? <Information /> : <ComingSoon />}
         </div>
     )

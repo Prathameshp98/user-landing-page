@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import UserInfo from '../../Components/User Info/UserInfo'
@@ -14,17 +14,28 @@ const Profile = () => {
         gallery: false,
         todo: false
     })
+    const[scroll, setSroll] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setSroll(false)
+        }, [1000])
+    })
 
     const optionHandler = (element) => {
         setOption(element)
     }
 
+    const handleScroll = () => {
+        setSroll(true)
+    }
+
     return (
         <>  
-            <div className={`${styles.profile__main}`}>
+            <div className={`${styles.profile__main}`} onScroll={handleScroll}>
                 <div className={`${styles.profile__inner}`}>
                     <Sidebar optionHandler={optionHandler} option={option} />
-                    <UserInfo option={option}/>
+                    <UserInfo option={option} scroll={scroll}/>
                 </div>
                 <Chat />
             </div>

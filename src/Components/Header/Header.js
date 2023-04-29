@@ -15,15 +15,19 @@ const Header = (props) => {
     const[isVisible, setVisible] = useState(false)
 
     useEffect(() => {
+        if(props.scroll){
+            setVisible(false)
+        }
+
         window.onclick = (event) => {
             if(event.target.contains(icon.current)){
                 setVisible(false)
-            }
+            } 
         }
-    }, []);
+    }, [props]);
 
     const visibilityHandler = () => {
-        setVisible(!isVisible)
+        setVisible(!isVisible) 
     }
 
     return (

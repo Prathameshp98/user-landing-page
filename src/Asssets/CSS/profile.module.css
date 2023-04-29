@@ -4,6 +4,20 @@
     height: calc(100vh - 60px);
     margin: 30px;
     overflow: hidden;
+    overflow-y: auto;
+}
+
+.profile__main::-webkit-scrollbar {
+    width: 5px;
+}
+
+.profile__main::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+.profile__main::-webkit-scrollbar-thumb {
+    background: #bcbcbc;
+    border-radius: 3px;
 }
 
 .profile__inner {

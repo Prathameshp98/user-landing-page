@@ -1,5 +1,5 @@
 /* eslint-disable eqeqeq */
-import React, { useState } from 'react'
+import React from 'react'
 import { useParams, Link } from "react-router-dom"
 
 import styles from '../../Asssets/CSS/Components/AccountCard/account-card.module.css'
@@ -9,8 +9,6 @@ import users_data from '../../Data/users.json'
 const AccountCard = (props) => {
 
     const { userId } = useParams()
-    // eslint-disable-next-line no-unused-vars
-    const[randomNum, setRandomNum] = useState([3, 4, 6])
 
     const cardCloseHandler = () => {
         props.visibilityHandler(false)
@@ -26,9 +24,9 @@ const AccountCard = (props) => {
                             <h6>{filteredUser.name}</h6>
                             <p>{filteredUser.email}</p>
                             <div className={`${styles.accountcard__content__inner}`}>
-                                {users_data.users.filter(user => user.id != userId).filter(user => randomNum.includes(user.id)).map(filteredUser => {
+                                {users_data.users.filter(user => user.id != userId).filter(user => user.id != userId).map(filteredUser => {
                                     return (
-                                        <div key={filteredUser.id} className={`${styles.accountcard__content__inner}`}>
+                                        <div key={filteredUser.id}>
                                             <hr />
                                             <Link to={"/profile/" + filteredUser.id} style={{ textDecoration: 'none' }} onClick={cardCloseHandler}>
                                                 <div className={`${styles.accountcard__content__inner__2}`}>

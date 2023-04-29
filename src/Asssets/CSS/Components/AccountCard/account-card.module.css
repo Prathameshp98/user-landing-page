@@ -42,8 +42,13 @@
     color: #cacaca;
 }
 
-.accountcard__inner .accountcard__content .accountcard__content__inner hr {
-    border: 1px solid #eeeeee;
+.accountcard__inner .accountcard__content .accountcard__content__inner {
+    height: 130px;
+    overflow-y: auto;
+}
+
+.accountcard__inner .accountcard__content .accountcard__content__inner::-webkit-scrollbar {
+    width: 0px;
 }
 
 .accountcard__inner .accountcard__content .accountcard__content__inner .accountcard__content__inner__2 {
