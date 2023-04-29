@@ -14,6 +14,7 @@ const Header = (props) => {
     const icon = useRef(null)
     const[isVisible, setVisible] = useState(false)
 
+    // hides the popup when user scrolls or clicks on header
     useEffect(() => {
         if(props.scroll){
             setVisible(false)
@@ -26,6 +27,7 @@ const Header = (props) => {
         }
     }, [props]);
 
+    // hides the popup
     const visibilityHandler = () => {
         setVisible(!isVisible) 
     }

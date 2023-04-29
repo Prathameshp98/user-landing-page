@@ -12,6 +12,7 @@ import users_data from '../../Data/users.json'
 
 const Information = () => {
 
+    // stores the url params
     const { userId } = useParams()
 
     return (

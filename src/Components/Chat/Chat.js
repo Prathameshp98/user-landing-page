@@ -13,13 +13,14 @@ import users_data from '../../Data/users.json'
 
 const Chat = () => {
 
+    // stores the url params
     const { userId } = useParams()
 
     const[isChatOpen, setChatOpen] = useState(false)
     // eslint-disable-next-line no-unused-vars
     const[randomNum, setRandomNum] = useState([1, 3, 4, 8])
 
-
+    // controls the chat opening and closing
     const chatHandler = () => {
         setChatOpen(!isChatOpen)
     }

@@ -26,6 +26,7 @@ const Profile = () => {
         setOption(element)
     }
 
+    // sets the state for scroll to true when the page is scrolled
     const handleScroll = () => {
         setSroll(true)
     }

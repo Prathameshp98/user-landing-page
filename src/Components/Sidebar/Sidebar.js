@@ -7,6 +7,7 @@ import right from '../../Asssets/images/next.webp'
 
 const Sidebar = (props) => {
 
+    // handles the option selection as per user click
     const optionHandler = (element) => {
         if(element === 1){ props.optionHandler({profile: true, posts: false, gallery: false, todo: false}) }
         if(element === 2){ props.optionHandler({profile: false, posts: true, gallery: false, todo: false}) }
